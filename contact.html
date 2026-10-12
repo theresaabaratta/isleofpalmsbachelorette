@@ -8,96 +8,128 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Lora:ital@1&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
   <style>
     :root{
-      --ink:#666;
-      --ink-dark:#555;
-      --muted:#9a9a9a;
-      --pink:#e8a3ad;
-      --pink-dark:#d4808c;
-      --pink-soft:#f8e6e9;
-      --nav:#8a8a8a;
-      --line:#dcdcdc;
-      --bg:#fff;
-      --ph:#f3f1f1;
+      --bg:#0d1720;
+      --bg-2:#13212d;
+      --bg-3:#1a2c3a;
+      --ink:#c7d1d9;
+      --ink-soft:#8fa0ad;
+      --head:#f4efe6;
+      --sand:#e2bf86;
+      --sand-dark:#c9a266;
+      --coral:#e98b78;
+      --line:#24384a;
     }
-    body{background:var(--bg);color:var(--ink);font-family:'Raleway',sans-serif;font-size:15px;line-height:1.85;letter-spacing:.06em;}
-    a{color:var(--pink);font-weight:700;text-decoration:none;}
-    a:hover{color:var(--pink-dark);text-decoration:underline;}
+    body{background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.75;}
+    a{color:var(--sand);font-weight:500;text-decoration:none;border-bottom:1px solid rgba(226,191,134,.35);}
+    a:hover{color:#f1d6a8;border-bottom-color:var(--sand);}
+    h1,h2,h3{font-family:'Playfair Display',serif;color:var(--head);}
 
-    /* masthead */
-    .masthead{padding:56px 16px 40px;text-align:center;}
-    .masthead a{color:var(--muted);font-weight:400;text-decoration:none;}
-    .masthead .brand{font-family:'Cinzel',serif;font-size:clamp(30px,6vw,58px);letter-spacing:.12em;color:#8f8f8f;line-height:1.1;}
-    .masthead .dot{color:var(--pink);font-size:.5em;vertical-align:middle;margin:0 .25em;}
-    .masthead .tag{font-size:11.5px;letter-spacing:.35em;text-transform:uppercase;color:var(--muted);margin-top:10px;}
+    /* hero */
+    .hero{background:radial-gradient(ellipse at 80% 0%,#1f3a4f 0%,var(--bg) 60%);border-bottom:1px solid var(--line);padding:64px 0 44px;}
+    .eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--coral);font-weight:700;}
+    .hero h1{font-size:clamp(32px,5vw,52px);line-height:1.1;margin:14px 0 16px;}
+    .hero h1 em{color:var(--sand);font-style:italic;}
+    .hero .lede{max-width:560px;color:var(--ink);font-size:17px;}
+    .updated{font-size:13px;color:var(--ink-soft);margin-top:14px;}
+    .hero-photo{width:200px;height:200px;border-radius:50%;overflow:hidden;border:3px solid var(--sand);margin:0 auto;}
 
-    /* post */
-    .post-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px solid var(--line);padding-bottom:6px;margin-bottom:28px;}
-    .post-head h1{font-size:16px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#8a8a8a;margin:0;}
-    .post-head time{font-family:'Lora',serif;font-style:italic;font-size:12.5px;color:#8a8a8a;letter-spacing:.03em;white-space:nowrap;}
-    .post h2{font-size:15px;font-weight:700;color:#7d7d7d;letter-spacing:.06em;margin:34px 0 4px;}
-    .post h3{font-size:14.5px;font-weight:700;color:#8a8a8a;letter-spacing:.06em;margin:22px 0 2px;}
-    .post p{margin-bottom:1rem;}
-    .post ul{padding-left:1.1rem;}
-    .post li{margin-bottom:.35rem;}
+    /* stat strip */
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:36px;}
+    .stats div{background:var(--bg-2);padding:14px 16px;}
+    .stats strong{display:block;font-family:'Playfair Display',serif;font-size:22px;color:var(--head);}
+    .stats span{font-size:12.5px;color:var(--ink-soft);letter-spacing:.04em;}
+    @media (max-width:767px){.stats{grid-template-columns:repeat(2,1fr);}}
 
-    /* photo slots */
-    .photo{position:relative;background:var(--ph);overflow:hidden;margin:0;}
-    .photo::after{content:attr(data-label);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#b9b0b2;z-index:0;}
+    /* jump links */
+    .jump{position:sticky;top:0;z-index:5;background:rgba(13,23,32,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+    .jump .inner{display:flex;gap:8px;overflow-x:auto;padding:12px 0;scrollbar-width:none;}
+    .jump a{flex:0 0 auto;border:1px solid var(--line);border-radius:999px;padding:5px 14px;font-size:13px;color:var(--ink);}
+    .jump a:hover{border-color:var(--sand);color:var(--sand);}
+
+    /* sections */
+    .sec{padding:44px 0;border-bottom:1px solid var(--line);}
+    .sec:last-of-type{border-bottom:0;}
+    .num{font-family:'Playfair Display',serif;font-style:italic;color:var(--coral);font-size:15px;}
+    .sec h2{font-size:clamp(24px,3vw,30px);margin:2px 0 14px;}
+    .sec h3{font-size:19px;margin:22px 0 6px;color:var(--sand);}
+    .sec p{margin-bottom:1rem;}
+
+    /* place lists, no cards */
+    .places{list-style:none;padding:0;margin:0;}
+    .places li{display:flex;gap:14px;padding:11px 0;border-bottom:1px dashed var(--line);}
+    .places li:last-child{border-bottom:0;}
+    .places .name{flex:0 0 230px;}
+    .places .name a{font-weight:700;}
+    .places .desc{color:var(--ink);}
+    @media (max-width:575px){.places li{flex-direction:column;gap:2px;}.places .name{flex:none;}}
+
+    .bullets{padding-left:1.1rem;}
+    .bullets li{margin-bottom:.45rem;}
+    .bullets li::marker{color:var(--coral);}
+    .bullets strong{color:var(--head);}
+
+    /* photos: 200 x 200 */
+    .photos{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:30px 0 6px;}
+    .photo{position:relative;width:200px;height:200px;margin:0;background:var(--bg-3);border-radius:10px;overflow:hidden;flex:0 0 200px;}
+    .photo::after{content:attr(data-label);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#5d7486;z-index:0;}
     .photo img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;display:block;}
-    .photo-row .photo{max-width:200px;margin-left:auto;margin-right:auto;}
-    .photo-row .ratio-square{max-width:200px;}
-    .feature .photo{max-width:200px;margin:0 auto;}
-    .ratio-square{aspect-ratio:4/5;}
-    .ratio-square{aspect-ratio:1/1;}
-    .photo-hero{max-width:200px;margin:0 auto 26px;}
-    .photo-row{margin:22px 0 18px;}
-    .photo-row figcaption,.caption{font-size:12px;font-style:italic;color:var(--muted);text-align:center;margin-top:6px;letter-spacing:.03em;}
+    .hero-photo .photo{border-radius:50%;}
 
-    /* sidebar */
-    .sidebar .box{border:1px solid var(--pink);padding:22px 20px;margin-bottom:26px;text-align:center;}
-    .sidebar h4{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#8a8a8a;font-weight:500;margin-bottom:12px;}
-    .sidebar ul{list-style:none;padding:0;margin:0;text-align:left;}
-    .sidebar li{border-bottom:1px solid #eee;padding:6px 0;font-size:13px;}
-    .sidebar li a{font-weight:500;color:var(--ink);}
-    .sidebar li a:hover{color:var(--pink-dark);}
-    @media (min-width:992px){.sidebar{position:sticky;top:20px;}}
+    /* night-in feature */
+    .feature{background:linear-gradient(135deg,#1c2f3f,#241f33);border:1px solid #33475a;border-radius:14px;padding:28px;margin:44px 0 0;}
+    .feature h2{margin-top:4px;}
 
-    /* feature block */
-    .feature{border-top:1px solid var(--pink-soft);border-bottom:1px solid var(--pink-soft);padding:20px 0;margin:26px 0;}
+    /* itinerary timeline */
+    .timeline{list-style:none;padding:0;margin:0;border-left:2px solid var(--line);}
+    .timeline li{position:relative;padding:0 0 22px 24px;}
+    .timeline li::before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--sand);}
+    .timeline .day{font-family:'Playfair Display',serif;color:var(--head);font-size:18px;display:block;}
 
     /* footer */
-    footer{padding:60px 16px 30px;text-align:center;}
-    .monogram{width:150px;height:auto;margin:0 auto 22px;display:block;}
-    .disclosure{font-family:'Lora',serif;font-style:normal;text-transform:uppercase;letter-spacing:.12em;font-size:13px;color:#8a8a8a;}
-    .copy{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a8a8a;margin-top:8px;}
-    .footer-rule{border-top:1px solid #bbb;margin-top:18px;}
+    footer{background:#09121a;border-top:1px solid var(--line);padding:46px 16px 34px;text-align:center;}
+    .foot-brand{font-family:'Playfair Display',serif;font-size:22px;color:var(--head);}
+    .foot-brand em{color:var(--sand);}
+    .disclosure{font-size:13px;color:var(--ink-soft);margin:10px 0 14px;}
+    .foot-links a{color:var(--ink);font-size:13px;letter-spacing:.14em;text-transform:uppercase;border:0;margin:0 12px;}
+    .foot-links a:hover{color:var(--sand);}
+    .copy{font-size:12px;color:#5d7486;margin-top:16px;}
   </style>
   <style>
-    .page h1{font-size:16px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#8a8a8a;border-bottom:1px solid var(--line);padding-bottom:6px;margin-bottom:28px;}
-    .page h2{font-size:15px;font-weight:700;color:#7d7d7d;letter-spacing:.06em;margin:30px 0 4px;}
-    .page .form-control{border-radius:0;border-color:#ddd;font-size:14px;letter-spacing:.03em;}
-    .page .form-control:focus{border-color:var(--pink);box-shadow:none;}
-    .page label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#8a8a8a;margin-bottom:4px;}
-    .btn-pink{background:var(--pink);color:#fff;border:0;border-radius:0;letter-spacing:.2em;text-transform:uppercase;font-size:12px;padding:.7rem 1.6rem;}
-    .btn-pink:hover{background:var(--pink-dark);color:#fff;}
+    .page-hero{background:radial-gradient(ellipse at 80% 0%,#1f3a4f 0%,var(--bg) 60%);border-bottom:1px solid var(--line);padding:56px 0 36px;}
+    .page-hero .back{font-size:13px;border:0;color:var(--ink-soft);}
+    .page-hero .back:hover{color:var(--sand);}
+    .page-hero h1{font-size:clamp(30px,4.5vw,44px);margin:12px 0 0;}
+    .page{padding:40px 0 56px;}
+    .page h2{font-size:22px;margin:30px 0 8px;}
+    .page ul{padding-left:1.1rem;}
+    .page li::marker{color:var(--coral);}
+    .page strong{color:var(--head);}
+    .page label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:4px;}
+    .page .form-control{background:var(--bg-2);border:1px solid var(--line);color:var(--head);border-radius:8px;}
+    .page .form-control:focus{background:var(--bg-2);color:var(--head);border-color:var(--sand);box-shadow:none;}
+    .btn-sand{background:var(--sand);color:#1a1307;border:0;border-radius:999px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:13px;padding:.75rem 1.8rem;}
+    .btn-sand:hover{background:#f1d6a8;color:#1a1307;}
   </style>
 </head>
 <body>
 
-<header class="masthead">
-  <a href="index.html">
-    <div class="brand">ISLE<span class="dot">&#9679;</span>OF<span class="dot">&#9679;</span>PALMS</div>
-    <div class="tag">Bachelorette Weekend Guide</div>
-  </a>
+<header class="page-hero">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <a class="back" href="index.html">&larr; Isle of Palms Bachelorette Guide</a>
+        <h1>Contact</h1>
+      </div>
+    </div>
+  </div>
 </header>
 
-<main class="container pb-4">
+<main class="container">
   <div class="row justify-content-center">
-    <article class="col-lg-8 page">
-      <h1>Contact</h1>
+    <article class="col-lg-9 page">
       <p>Questions, corrections or a business you'd like us to consider? Send a message and we'll get back to you.</p>
       <form class="mt-4" action="#" method="post">
         <div class="mb-3">
@@ -116,22 +148,20 @@
           <label for="message" class="form-label">Message</label>
           <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
         </div>
-        <button type="submit" class="btn btn-pink">Send Message</button>
+        <button type="submit" class="btn btn-sand">Send Message</button>
       </form>
+    
     </article>
   </div>
 </main>
 
 <footer>
-  <svg class="monogram" viewBox="0 0 160 110" role="img" aria-label="IOP monogram">
-    <path d="M18 70 C10 40, 40 30, 45 52 M142 70 C150 40, 120 30, 115 52" fill="none" stroke="#f2c9cf" stroke-width="3" stroke-linecap="round"/>
-    <path d="M30 88 C50 102, 110 102, 130 88" fill="none" stroke="#f2c9cf" stroke-width="2.5" stroke-linecap="round"/>
-    <text x="80" y="78" text-anchor="middle" font-family="Cinzel, serif" font-size="46" fill="#ecb3bb" stroke="#d9939d" stroke-width=".6">IOP</text>
-    <circle cx="80" cy="20" r="3" fill="#e8a3ad"/>
-  </svg>
-  <p class="disclosure mb-0">This guide may contain affiliate and partner links.</p>
-  <p class="copy">&copy; Isle of Palms Bachelorette 2026 &nbsp;/&nbsp; <a href="about.html" style="color:inherit;font-weight:400">About</a> &nbsp;/&nbsp; <a href="contact.html" style="color:inherit;font-weight:400">Contact</a> &nbsp;/&nbsp; <a href="privacy.html" style="color:inherit;font-weight:400">Privacy</a></p>
-  <div class="footer-rule"></div>
+  <div class="foot-brand">Isle of Palms <em>Bachelorette</em></div>
+  <p class="disclosure">This guide may contain affiliate and partner links.</p>
+  <div class="foot-links">
+    <a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a>
+  </div>
+  <p class="copy">&copy; 2026 Isle of Palms Bachelorette</p>
 </footer>
 
 </body>

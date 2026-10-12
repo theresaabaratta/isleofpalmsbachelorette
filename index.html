@@ -9,12 +9,12 @@
   <meta property="og:title" content="Isle of Palms Bachelorette Party Guide">
   <meta property="og:description" content="Where to stay, eat, drink and play for an Isle of Palms, SC bachelorette weekend.">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="images/iop-beach-house-hero.png">
+  <meta property="og:image" content="images/beach-house.png">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Lora:ital@1&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -24,7 +24,7 @@
     "about": "Isle of Palms bachelorette party planning",
     "datePublished": "2026-10-12",
     "dateModified": "2026-10-12",
-    "image": "images/iop-beach-house-hero.png",
+    "image": "images/beach-house.png",
     "author": {"@type": "Organization", "name": "Isle of Palms Bachelorette"},
     "contentLocation": {"@type": "Place", "name": "Isle of Palms, South Carolina"}
   }
@@ -32,300 +32,338 @@
 
   <style>
     :root{
-      --ink:#666;
-      --ink-dark:#555;
-      --muted:#9a9a9a;
-      --pink:#e8a3ad;
-      --pink-dark:#d4808c;
-      --pink-soft:#f8e6e9;
-      --nav:#8a8a8a;
-      --line:#dcdcdc;
-      --bg:#fff;
-      --ph:#f3f1f1;
+      --bg:#0d1720;
+      --bg-2:#13212d;
+      --bg-3:#1a2c3a;
+      --ink:#c7d1d9;
+      --ink-soft:#8fa0ad;
+      --head:#f4efe6;
+      --sand:#e2bf86;
+      --sand-dark:#c9a266;
+      --coral:#e98b78;
+      --line:#24384a;
     }
-    body{background:var(--bg);color:var(--ink);font-family:'Raleway',sans-serif;font-size:15px;line-height:1.85;letter-spacing:.06em;}
-    a{color:var(--pink);font-weight:700;text-decoration:none;}
-    a:hover{color:var(--pink-dark);text-decoration:underline;}
+    body{background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.75;}
+    a{color:var(--sand);font-weight:500;text-decoration:none;border-bottom:1px solid rgba(226,191,134,.35);}
+    a:hover{color:#f1d6a8;border-bottom-color:var(--sand);}
+    h1,h2,h3{font-family:'Playfair Display',serif;color:var(--head);}
 
-    /* top nav */
-    .topnav{background:var(--nav);}
-    .topnav .nav-link{color:#fff;font-weight:500;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;padding:.85rem 1.4rem;}
-    .topnav .nav-link:hover{color:var(--pink-soft);text-decoration:none;}
-    .topnav .navbar-toggler{border-color:rgba(255,255,255,.5);}
-    .topnav .navbar-toggler-icon{filter:invert(1);}
+    /* hero */
+    .hero{background:radial-gradient(ellipse at 80% 0%,#1f3a4f 0%,var(--bg) 60%);border-bottom:1px solid var(--line);padding:64px 0 44px;}
+    .eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--coral);font-weight:700;}
+    .hero h1{font-size:clamp(32px,5vw,52px);line-height:1.1;margin:14px 0 16px;}
+    .hero h1 em{color:var(--sand);font-style:italic;}
+    .hero .lede{max-width:560px;color:var(--ink);font-size:17px;}
+    .updated{font-size:13px;color:var(--ink-soft);margin-top:14px;}
+    .hero-photo{width:200px;height:200px;border-radius:50%;overflow:hidden;border:3px solid var(--sand);margin:0 auto;}
 
-    /* masthead */
-    .masthead{padding:56px 16px 40px;text-align:center;}
-    .masthead a{color:var(--muted);font-weight:400;text-decoration:none;}
-    .masthead .brand{font-family:'Cinzel',serif;font-size:clamp(30px,6vw,58px);letter-spacing:.12em;color:#8f8f8f;line-height:1.1;}
-    .masthead .dot{color:var(--pink);font-size:.5em;vertical-align:middle;margin:0 .25em;}
-    .masthead .tag{font-size:11.5px;letter-spacing:.35em;text-transform:uppercase;color:var(--muted);margin-top:10px;}
+    /* stat strip */
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:36px;}
+    .stats div{background:var(--bg-2);padding:14px 16px;}
+    .stats strong{display:block;font-family:'Playfair Display',serif;font-size:22px;color:var(--head);}
+    .stats span{font-size:12.5px;color:var(--ink-soft);letter-spacing:.04em;}
+    @media (max-width:767px){.stats{grid-template-columns:repeat(2,1fr);}}
 
-    /* post */
-    .post-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px solid var(--line);padding-bottom:6px;margin-bottom:28px;}
-    .post-head h1{font-size:16px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#8a8a8a;margin:0;}
-    .post-head time{font-family:'Lora',serif;font-style:italic;font-size:12.5px;color:#8a8a8a;letter-spacing:.03em;white-space:nowrap;}
-    .post h2{font-size:15px;font-weight:700;color:#7d7d7d;letter-spacing:.06em;margin:34px 0 4px;}
-    .post h3{font-size:14.5px;font-weight:700;color:#8a8a8a;letter-spacing:.06em;margin:22px 0 2px;}
-    .post p{margin-bottom:1rem;}
-    .post ul{padding-left:1.1rem;}
-    .post li{margin-bottom:.35rem;}
+    /* jump links */
+    .jump{position:sticky;top:0;z-index:5;background:rgba(13,23,32,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+    .jump .inner{display:flex;gap:8px;overflow-x:auto;padding:12px 0;scrollbar-width:none;}
+    .jump a{flex:0 0 auto;border:1px solid var(--line);border-radius:999px;padding:5px 14px;font-size:13px;color:var(--ink);}
+    .jump a:hover{border-color:var(--sand);color:var(--sand);}
 
-    /* photo slots */
-    .photo{position:relative;background:var(--ph);overflow:hidden;margin:0;}
-    .photo::after{content:attr(data-label);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#b9b0b2;z-index:0;}
+    /* sections */
+    .sec{padding:44px 0;border-bottom:1px solid var(--line);}
+    .sec:last-of-type{border-bottom:0;}
+    .num{font-family:'Playfair Display',serif;font-style:italic;color:var(--coral);font-size:15px;}
+    .sec h2{font-size:clamp(24px,3vw,30px);margin:2px 0 14px;}
+    .sec h3{font-size:19px;margin:22px 0 6px;color:var(--sand);}
+    .sec p{margin-bottom:1rem;}
+
+    /* place lists, no cards */
+    .places{list-style:none;padding:0;margin:0;}
+    .places li{display:flex;gap:14px;padding:11px 0;border-bottom:1px dashed var(--line);}
+    .places li:last-child{border-bottom:0;}
+    .places .name{flex:0 0 230px;}
+    .places .name a{font-weight:700;}
+    .places .desc{color:var(--ink);}
+    @media (max-width:575px){.places li{flex-direction:column;gap:2px;}.places .name{flex:none;}}
+
+    .bullets{padding-left:1.1rem;}
+    .bullets li{margin-bottom:.45rem;}
+    .bullets li::marker{color:var(--coral);}
+    .bullets strong{color:var(--head);}
+
+    /* photos: 200 x 200 */
+    .photos{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:30px 0 6px;}
+    .photo{position:relative;width:200px;height:200px;margin:0;background:var(--bg-3);border-radius:10px;overflow:hidden;flex:0 0 200px;}
+    .photo::after{content:attr(data-label);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#5d7486;z-index:0;}
     .photo img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;display:block;}
-    .photo-row .photo{max-width:200px;margin-left:auto;margin-right:auto;}
-    .photo-row .ratio-square{max-width:200px;}
-    .feature .photo{max-width:200px;margin:0 auto;}
-    .ratio-square{aspect-ratio:4/5;}
-    .ratio-square{aspect-ratio:1/1;}
-    .photo-hero{max-width:200px;margin:0 auto 26px;}
-    .photo-row{margin:22px 0 18px;}
-    .photo-row figcaption,.caption{font-size:12px;font-style:italic;color:var(--muted);text-align:center;margin-top:6px;letter-spacing:.03em;}
+    .hero-photo .photo{border-radius:50%;}
 
-    /* sidebar */
-    .sidebar .box{border:1px solid var(--pink);padding:22px 20px;margin-bottom:26px;text-align:center;}
-    .sidebar h4{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#8a8a8a;font-weight:500;margin-bottom:12px;}
-    .sidebar ul{list-style:none;padding:0;margin:0;text-align:left;}
-    .sidebar li{border-bottom:1px solid #eee;padding:6px 0;font-size:13px;}
-    .sidebar li a{font-weight:500;color:var(--ink);}
-    .sidebar li a:hover{color:var(--pink-dark);}
-    @media (min-width:992px){.sidebar{position:sticky;top:20px;}}
+    /* night-in feature */
+    .feature{background:linear-gradient(135deg,#1c2f3f,#241f33);border:1px solid #33475a;border-radius:14px;padding:28px;margin:44px 0 0;}
+    .feature h2{margin-top:4px;}
 
-    /* michael feature */
-    .feature{border-top:1px solid var(--pink-soft);border-bottom:1px solid var(--pink-soft);padding:20px 0;margin:26px 0;}
+    /* itinerary timeline */
+    .timeline{list-style:none;padding:0;margin:0;border-left:2px solid var(--line);}
+    .timeline li{position:relative;padding:0 0 22px 24px;}
+    .timeline li::before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--sand);}
+    .timeline .day{font-family:'Playfair Display',serif;color:var(--head);font-size:18px;display:block;}
 
     /* footer */
-    footer{padding:60px 16px 30px;text-align:center;}
-    .monogram{width:150px;height:auto;margin:0 auto 22px;display:block;}
-    .disclosure{font-family:'Lora',serif;font-style:normal;text-transform:uppercase;letter-spacing:.12em;font-size:13px;color:#8a8a8a;}
-    .copy{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a8a8a;margin-top:8px;}
-    .footer-rule{border-top:1px solid #bbb;margin-top:18px;}
+    footer{background:#09121a;border-top:1px solid var(--line);padding:46px 16px 34px;text-align:center;}
+    .foot-brand{font-family:'Playfair Display',serif;font-size:22px;color:var(--head);}
+    .foot-brand em{color:var(--sand);}
+    .disclosure{font-size:13px;color:var(--ink-soft);margin:10px 0 14px;}
+    .foot-links a{color:var(--ink);font-size:13px;letter-spacing:.14em;text-transform:uppercase;border:0;margin:0 12px;}
+    .foot-links a:hover{color:var(--sand);}
+    .copy{font-size:12px;color:#5d7486;margin-top:16px;}
   </style>
 </head>
 <body>
 
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-md-8">
+        <div class="eyebrow">Isle of Palms, SC &middot; Bachelorette Guide</div>
+        <h1>Isle of Palms Bachelorette Party: <em>Ideas, Activities &amp; Where to Stay</em></h1>
+        <p class="lede">Oceanfront rentals, pool days and boat trips on the island, with downtown Charleston 20 minutes away for the big night out.</p>
+        <div class="updated">Updated October 12, 2026</div>
+      </div>
+      <div class="col-md-4">
+        <div class="hero-photo">
+          <figure class="photo" data-label="Isle of Palms beach house">
+            <img width="200" height="200" fetchpriority="high" decoding="async" src="images/beach-house.png" alt="Light blue Isle of Palms beach house with palmetto trees for a bachelorette weekend" onerror="this.remove()">
+          </figure>
+        </div>
+      </div>
+    </div>
 
-<!-- MASTHEAD -->
-<header class="masthead" id="top">
-  <a href="#top">
-    <div class="brand">ISLE<span class="dot">&#9679;</span>OF<span class="dot">&#9679;</span>PALMS</div>
-    <div class="tag">Bachelorette Weekend Guide</div>
-  </a>
+    <div class="stats">
+      <div><strong>20–25 min</strong><span>to downtown Charleston</span></div>
+      <div><strong>10 min</strong><span>to Sullivan's Island</span></div>
+      <div><strong>25–30 min</strong><span>from CHS airport</span></div>
+      <div><strong>8–16</strong><span>ideal group size</span></div>
+    </div>
+  </div>
 </header>
 
-<main class="container pb-4">
-  <div class="row g-5">
+<!-- JUMP LINKS -->
+<nav class="jump" aria-label="On this page">
+  <div class="container">
+    <div class="inner">
+      <a href="#stay">Stay</a>
+      <a href="#travel">Getting Around</a>
+      <a href="#eat">Eat</a>
+      <a href="#bars">Bars</a>
+      <a href="#downtown">Charleston Night Out</a>
+      <a href="#activities">Activities</a>
+      <a href="#ideas">Party Ideas</a>
+      <a href="#itinerary">Itinerary</a>
+    </div>
+  </div>
+</nav>
 
-    <!-- POST -->
-    <article class="col-lg-8 post">
-      <div class="post-head">
-        <h1>Isle of Palms Bachelorette Party Guide</h1>
-        <time datetime="2026-10-12">monday, october 12, 2026</time>
-      </div>
+<main class="container">
+  <div class="row justify-content-center">
+    <article class="col-lg-9">
 
-      <figure class="photo photo-hero ratio-square" data-label="Hero: Isle of Palms beach house with palmettos">
-        <img width="200" height="200" fetchpriority="high" decoding="async" src="images/beach-house.png" alt="Light blue Isle of Palms beach house with palmetto trees for a bachelorette weekend" onerror="this.remove()">
-      </figure>
+      <!-- 01 -->
+      <section class="sec">
+        <div class="num">01</div>
+        <h2>Why Isle of Palms</h2>
+        <p>Isle of Palms is a quiet, residential beach island, so the party centers on the rental: pool, porch and sand. Plan one or two big nights in Charleston and keep the rest relaxed. Sullivan's Island is next door for casual food and bars, and Shem Creek in Mount Pleasant is close for boat days.</p>
+        <div class="photos">
+          <figure class="photo" data-label="Pool overlooking the ocean"><img width="200" height="200" loading="lazy" decoding="async" src="images/house-beach.png" alt="Rental home pool overlooking the ocean on Isle of Palms" onerror="this.remove()"></figure>
+          <figure class="photo" data-label="Coffee in the sun"><img width="200" height="200" loading="lazy" decoding="async" src="images/coffee-sun.png" alt="Morning coffee in the sun at an Isle of Palms rental" onerror="this.remove()"></figure>
+        </div>
+      </section>
 
-      <p>Isle of Palms sits about 20–25 minutes from downtown Charleston, SC. You get big oceanfront rental homes, pool days and a quiet island base, plus easy access to King Street for a night out. Below: where to stay, where to eat and drink, the best bachelorette activities and ideas, and a weekend schedule that works for groups of 8–16.</p>
+      <!-- 02 -->
+      <section class="sec" id="stay">
+        <div class="num">02</div>
+        <h2>Where to Stay</h2>
+        <h3>Private beach houses</h3>
+        <p>Best for groups. Look on <a href="https://www.vrbo.com/" target="_blank" rel="noopener">VRBO</a> or <a href="https://www.airbnb.com/" target="_blank" rel="noopener">Airbnb</a> for 7–10 bedroom homes with a private pool, hot tub and beach access. Heated pools usually cost extra, which matters October–April. Homes like <a href="https://www.google.com/maps/search/Belle+Mer+Isle+of+Palms+SC" target="_blank" rel="noopener">Belle Mer</a> are built for big groups.</p>
+        <h3>Resorts and hotels</h3>
+        <ul class="places">
+          <li><span class="name"><a href="https://www.destinationhotels.com/wild-dunes" target="_blank" rel="noopener">Wild Dunes Resort</a></span><span class="desc">North end of the island. Pools, spa, golf, beach service and resort-managed homes.</span></li>
+          <li><span class="name"><a href="https://www.seasideinniop.com/" target="_blank" rel="noopener">Seaside Inn</a></span><span class="desc">Oceanfront near Front Beach, with bikes and beach chairs.</span></li>
+          <li><span class="name"><a href="https://palmscharleston.com/" target="_blank" rel="noopener">The Palms Oceanfront Hotel</a></span><span class="desc">On the sand and walkable to the Front Beach bars.</span></li>
+        </ul>
+        <div class="photos">
+          <figure class="photo" data-label="Oceanfront stay"><img width="200" height="200" loading="lazy" decoding="async" src="images/hotel.png" alt="Oceanfront hotel on Isle of Palms" onerror="this.remove()"></figure>
+          <figure class="photo" data-label="Bride's bedroom"><img width="200" height="200" loading="lazy" decoding="async" src="images/bedroom.png" alt="Decorated bride's bedroom in a beach rental" onerror="this.remove()"></figure>
+          <figure class="photo" data-label="Wild Dunes beach"><img width="200" height="200" loading="lazy" decoding="async" src="images/beach-shot.png" alt="Beach at Wild Dunes Resort, Isle of Palms" onerror="this.remove()"></figure>
+        </div>
+      </section>
 
-      <!-- PHOTO ROW 1 -->
-      <div class="row g-3 photo-row">
-        <div class="col-6"><figure class="photo ratio-square" data-label="Pool overlooking the ocean"><img width="200" height="200" loading="lazy" decoding="async" src="images/house-beach.png" alt="Rental home pool overlooking the ocean on Isle of Palms" onerror="this.remove()"></figure></div>
-        <div class="col-6"><figure class="photo ratio-square" data-label="Beach path from the house"><img width="200" height="200" loading="lazy" decoding="async" src="images/coffee-sun.png" alt="Boardwalk path from a rental house to the Isle of Palms beach" onerror="this.remove()"></figure></div>
-      </div>
+      <!-- 03 -->
+      <section class="sec" id="travel">
+        <div class="num">03</div>
+        <h2>Getting There &amp; Getting Around</h2>
+        <ul class="bullets">
+          <li><strong>Fly:</strong> Charleston International (CHS) is 25–30 minutes from the island by Uber or shuttle.</li>
+          <li><strong>Drive:</strong> Charlotte is about 3 hours. A few cars on site make grocery runs easy.</li>
+          <li><strong>On the island:</strong> golf carts and bikes are the easiest way to reach Front Beach and Sullivan's.</li>
+          <li><strong>To downtown:</strong> rideshares can cost $30–$100 each way at peak times and late pickups are slow. Pre-book rides home or hire a driver for the night.</li>
+        </ul>
+      </section>
 
-      <h2>Why Isle of Palms?</h2>
-      <p>It's a family-friendly island, so the party happens at the house: pool, porch and beach. That makes it ideal for a relaxed bachelorette with one or two big nights in Charleston. Sullivan's Island is 10 minutes away for bars and casual food, and Mount Pleasant's Shem Creek is close for boat days.</p>
+      <!-- 04 -->
+      <section class="sec">
+        <div class="num">04</div>
+        <h2>Stocking the Rental</h2>
+        <p>Make one big stop on arrival. The <a href="https://www.costco.com/warehouse-locations/charleston-sc-360.html" target="_blank" rel="noopener">Costco at Ashley Town Center</a> carries beer, wine and liquor along with breakfast, charcuterie and mixers. For smaller items, <a href="https://www.google.com/maps/search/Publix+North+Point+Mount+Pleasant+SC" target="_blank" rel="noopener">Publix at North Point</a> in Mount Pleasant is about 15 minutes away.</p>
+        <div class="photos">
+          <figure class="photo" data-label="Car packed for the trip"><img width="200" height="200" loading="lazy" decoding="async" src="images/car-pack.png" alt="Car packed with drinks for the bachelorette road trip" onerror="this.remove()"></figure>
+          <figure class="photo" data-label="Grocery haul"><img width="200" height="200" loading="lazy" decoding="async" src="images/grocery-shop.png" alt="Shopping cart of snacks and drinks for the beach house" onerror="this.remove()"></figure>
+        </div>
+      </section>
 
-      <h2 id="stay">Where Did You Stay?</h2>
-      <h3>Private beach houses</h3>
-      <p>The go-to choice for groups. Search <a href="https://www.vrbo.com/" target="_blank" rel="noopener">VRBO</a> or <a href="https://www.airbnb.com/" target="_blank" rel="noopener">Airbnb</a> for 7–10 bedroom homes with a private pool, hot tub and direct beach access. Ask whether the pool can be heated (usually an extra fee) if you're going October–April. Large homes such as <a href="https://www.google.com/maps/search/Belle+Mer+Isle+of+Palms+SC" target="_blank" rel="noopener">Belle Mer</a> sleep big groups comfortably.</p>
-      <h3>Resorts and hotels</h3>
-      <ul>
-        <li><a href="https://www.destinationhotels.com/wild-dunes" target="_blank" rel="noopener">Wild Dunes Resort</a>: north end of the island; pools, spa, golf, beach service and resort-managed rental homes.</li>
-        <li><a href="https://www.seasideinniop.com/" target="_blank" rel="noopener">Seaside Inn</a>: oceanfront hotel near Front Beach with bike rentals and beach chairs.</li>
-        <li><a href="https://palmscharleston.com/" target="_blank" rel="noopener">The Palms Oceanfront Hotel</a>: steps from the sand, walkable to Front Beach bars.</li>
-      </ul>
+      <!-- 05 -->
+      <section class="sec" id="eat">
+        <div class="num">05</div>
+        <h2>Where to Eat</h2>
+        <ul class="places">
+          <li><span class="name"><a href="https://boathouserestaurants.com/" target="_blank" rel="noopener">The Boathouse at Breach Inlet</a></span><span class="desc">Seafood and water views at the Sullivan's Island bridge.</span></li>
+          <li><span class="name"><a href="http://acmelowcountrykitchen.com/" target="_blank" rel="noopener">Acme Lowcountry Kitchen</a></span><span class="desc">Southern brunch; order the shrimp and grits.</span></li>
+          <li><span class="name"><a href="https://www.theobstinatedaughter.com/" target="_blank" rel="noopener">The Obstinate Daughter</a></span><span class="desc">Sullivan's. Pizza, pasta and seafood for a group dinner.</span></li>
+          <li><span class="name"><a href="https://www.hometeambbq.com/" target="_blank" rel="noopener">Home Team BBQ</a></span><span class="desc">Sullivan's. Casual late lunch; big groups should expect a wait.</span></li>
+          <li><span class="name"><a href="https://www.google.com/maps/search/The+Co-Op+Frose+and+Eatery+Sullivan%27s+Island" target="_blank" rel="noopener">The Co-Op Frosé &amp; Eatery</a></span><span class="desc">Frosé flights and sandwiches on Sullivan's and Isle of Palms.</span></li>
+        </ul>
+        <div class="photos">
+          <figure class="photo" data-label="Frosé on Sullivan's"><img width="200" height="200" loading="lazy" decoding="async" src="images/pajama-party.png" alt="Frosé flight on Sullivan's Island" onerror="this.remove()"></figure>
+          <figure class="photo" data-label="BBQ lunch"><img width="200" height="200" loading="lazy" decoding="async" src="images/bbq-girls.png" alt="BBQ lunch on Sullivan's Island during a bachelorette" onerror="this.remove()"></figure>
+        </div>
+      </section>
 
-      <!-- PHOTO ROW 2 -->
-      <div class="row g-3 photo-row">
-        <div class="col-4"><figure class="photo ratio-square" data-label="Oceanfront rental home"><img width="200" height="200" loading="lazy" decoding="async" src="images/hotel.png" alt="Large oceanfront rental home on Isle of Palms" onerror="this.remove()"></figure></div>
-        <div class="col-4"><figure class="photo ratio-square" data-label="Bedroom set-up for the bride"><img width="200" height="200" loading="lazy" decoding="async" src="images/bedroom.png" alt="Decorated bride's bedroom in a beach rental" onerror="this.remove()"></figure></div>
-        <div class="col-4"><figure class="photo ratio-square" data-label="Wild Dunes beach"><img width="200" height="200" loading="lazy" decoding="async" src="images/beach-shot.png" alt="Beach at Wild Dunes Resort, Isle of Palms" onerror="this.remove()"></figure></div>
-      </div>
+      <!-- 06 -->
+      <section class="sec" id="bars">
+        <div class="num">06</div>
+        <h2>Island Bars</h2>
+        <ul class="places">
+          <li><span class="name"><a href="https://the-windjammer.com/" target="_blank" rel="noopener">The Windjammer</a></span><span class="desc">Front Beach bar with live music on the sand.</span></li>
+          <li><span class="name"><a href="https://www.coconutjoesbeachgrill.com/" target="_blank" rel="noopener">Coconut Joe's Beach Grill</a></span><span class="desc">Rooftop drinks over the ocean.</span></li>
+          <li><span class="name"><a href="https://www.dinghyiop.com/" target="_blank" rel="noopener">The Dinghy</a></span><span class="desc">Laid-back spot for a low-key night.</span></li>
+        </ul>
+      </section>
 
-      <h2>How Did You Get There?</h2>
-      <p>Fly into Charleston International (CHS), about 25–30 minutes away, and take an Uber or shuttle to the island. Charlotte is roughly a 3-hour drive, so driving groups can split cars and keep them for grocery runs.</p>
-
-      <h2>How Did You Get Around?</h2>
-      <p>Bring a few cars for errands, rent golf carts or bikes for the island, and Uber into Charleston. Rideshares can run $30–$100 each way at peak times, and late-night pickups on the island can take a while, so book return rides early or hire a driver for the night. A party bus usually isn't worth the cost for the short trip downtown.</p>
-
-      <h2>Stocking the House</h2>
-      <p>Do one big run on the way in. The <a href="https://www.costco.com/warehouse-locations/charleston-sc-360.html" target="_blank" rel="noopener">Costco at Ashley Town Center</a> sells beer, wine and liquor, so you can cover breakfast, charcuterie, bubbly and seltzers in one stop. Pick up smaller items at <a href="https://www.google.com/maps/search/Publix+North+Point+Mount+Pleasant+SC" target="_blank" rel="noopener">Publix at North Point</a> in Mount Pleasant, about 15 minutes from the island.</p>
-
-      <!-- PHOTO ROW 3 -->
-      <div class="row g-3 photo-row">
-        <div class="col-6"><figure class="photo ratio-square" data-label="Car packed for the trip"><img width="200" height="200" loading="lazy" decoding="async" src="images/car-pack.png" alt="Car packed with drinks for the bachelorette road trip" onerror="this.remove()"></figure></div>
-        <div class="col-6"><figure class="photo ratio-square" data-label="Grocery haul for the house"><img width="200" height="200" loading="lazy" decoding="async" src="images/grocery-shop.png" alt="Shopping cart of snacks and drinks for the beach house" onerror="this.remove()"></figure></div>
-      </div>
-
-      <h2 id="eat">Where to Eat on the Island</h2>
-      <ul>
-        <li><a href="https://boathouserestaurants.com/" target="_blank" rel="noopener">The Boathouse at Breach Inlet</a>: seafood with water views at the Sullivan's Island bridge.</li>
-        <li><a href="http://acmelowcountrykitchen.com/" target="_blank" rel="noopener">Acme Lowcountry Kitchen</a>: Southern brunch and shrimp and grits.</li>
-        <li><a href="https://www.theobstinatedaughter.com/" target="_blank" rel="noopener">The Obstinate Daughter</a> (Sullivan's): pizza, pasta and seafood for a group dinner.</li>
-        <li><a href="https://www.hometeambbq.com/" target="_blank" rel="noopener">Home Team BBQ</a> (Sullivan's): casual late lunch; expect a wait for big parties.</li>
-        <li><a href="https://www.google.com/maps/search/The+Co-Op+Frose+and+Eatery+Sullivan%27s+Island" target="_blank" rel="noopener">The Co-Op Frosé &amp; Eatery</a>: frosé flights and sandwiches, with shops on Sullivan's and Isle of Palms.</li>
-      </ul>
-
-      <!-- PHOTO ROW 4 -->
-      <div class="row g-3 photo-row">
-        <div class="col-6"><figure class="photo ratio-square" data-label="Frosé on Sullivan's Island"><img width="200" height="200" loading="lazy" decoding="async" src="images/pajama-party.png" alt="Frosé flight on Sullivan's Island" onerror="this.remove()"></figure></div>
-        <div class="col-6"><figure class="photo ratio-square" data-label="BBQ lunch with the girls"><img width="200" height="200" loading="lazy" decoding="async" src="images/bbq-girls.png" alt="BBQ lunch on Sullivan's Island during a bachelorette" onerror="this.remove()"></figure></div>
-      </div>
-
-      <h2>Where to Drink &amp; Party on the Island</h2>
-      <ul>
-        <li><a href="https://the-windjammer.com/" target="_blank" rel="noopener">The Windjammer</a>: beachfront bar with live music on Front Beach.</li>
-        <li><a href="https://www.coconutjoesbeachgrill.com/" target="_blank" rel="noopener">Coconut Joe's Beach Grill</a>: rooftop cocktails over the ocean.</li>
-        <li><a href="https://www.dinghyiop.com/" target="_blank" rel="noopener">The Dinghy</a>: laid-back island bar for a low-key night.</li>
-      </ul>
-
-      <h2>Downtown Charleston Night Out</h2>
-      <p>Book dinner 4–6 weeks out; many restaurants ask large groups for a deposit or set menu.</p>
-      <ul>
-        <li><a href="https://leonsoystershop.com/" target="_blank" rel="noopener">Leon's Oyster Shop</a>: fried chicken, oysters and an easy family-style option for big groups.</li>
-        <li><a href="https://www.thedarlingoysterbar.com/" target="_blank" rel="noopener">The Darling Oyster Bar</a>: raw bar on King Street before barhopping.</li>
-        <li><a href="https://www.vintagecharleston.com/" target="_blank" rel="noopener">Vintage Lounge</a>: wine, bubbles and charcuterie on Upper King.</li>
-        <li><a href="https://www.thecocktailclubcharleston.com/" target="_blank" rel="noopener">The Cocktail Club</a>: craft cocktails with a rooftop.</li>
-        <li><a href="https://www.google.com/maps/search/Uptown+Social+Charleston+SC" target="_blank" rel="noopener">Uptown Social</a>: rooftop bar and a lively Upper King crowd.</li>
-      </ul>
-
-      <!-- PHOTO ROW 5 -->
-      <div class="row g-3 photo-row">
-        <div class="col-4"><figure class="photo ratio-square" data-label="Oysters downtown"><img width="200" height="200" loading="lazy" decoding="async" src="images/oysters.png" alt="Oyster platter at a King Street restaurant" onerror="this.remove()"></figure></div>
-        <div class="col-4"><figure class="photo ratio-square" data-label="Champagne toast"><img width="200" height="200" loading="lazy" decoding="async" src="images/toasting-wine.png" alt="Champagne toast at a bachelorette dinner in Charleston" onerror="this.remove()"></figure></div>
-        <div class="col-4"><figure class="photo ratio-square" data-label="Upper King rooftop"><img width="200" height="200" loading="lazy" decoding="async" src="images/rooftop-bar.png" alt="Rooftop bar on Upper King Street, Charleston" onerror="this.remove()"></figure></div>
-      </div>
-
-      <h2 id="activities">Isle of Palms Bachelorette Activities</h2>
-      <ul>
-        <li><strong>Beach day:</strong> rent chairs and umbrellas, or use the house path straight to the sand.</li>
-        <li><strong>Boat day:</strong> <a href="https://www.google.com/maps/search/Captain+Cocktail+Cruises+Shem+Creek" target="_blank" rel="noopener">Captain Cocktail Cruises</a> runs BYOB party pontoons from Shem Creek with swim stops and floats.</li>
-        <li><strong>Harbor cruise:</strong> the <a href="https://www.danielislandferry.com/" target="_blank" rel="noopener">Daniel Island Ferry</a> offers private charters and sunset trips.</li>
-        <li><strong>Kayak or paddleboard:</strong> <a href="https://coastalexpeditions.com/shem-creek/" target="_blank" rel="noopener">Coastal Expeditions</a> rents boards and runs dolphin tours from Shem Creek.</li>
-        <li><strong>Golf carts and bikes:</strong> the easiest way to cruise Front Beach and Sullivan's.</li>
-        <li><strong>Golf or spa:</strong> both are on-site at <a href="https://www.destinationhotels.com/wild-dunes" target="_blank" rel="noopener">Wild Dunes Resort</a>.</li>
-      </ul>
-
-      <!-- PHOTO ROW 6 -->
-      <div class="row g-3 photo-row">
-        <div class="col-6"><figure class="photo ratio-square" data-label="Party pontoon on the harbor"><img width="200" height="200" loading="lazy" decoding="async" src="images/pantoon-boat.png" alt="Bachelorette party pontoon on Charleston Harbor" onerror="this.remove()"></figure></div>
-        <div class="col-6"><figure class="photo ratio-square" data-label="Golf cart on the island"><img width="200" height="200" loading="lazy" decoding="async" src="images/golf-cart.png" alt="Golf cart ride on Isle of Palms" onerror="this.remove()"></figure></div>
-      </div>
-
-      <h2>Bachelorette Party Ideas for the House</h2>
-      <ul>
-        <li>Custom cups with letter stickers so everyone can find their drink.</li>
-        <li>Hangover kits: pain reliever, makeup wipes, electrolytes, snacks.</li>
-        <li>Prosecco pong with coupes instead of red cups.</li>
-        <li>Matching swim cover-ups or a white look for the bride.</li>
-        <li>Balloon name banner and an instant camera for the photo wall.</li>
-        <li>Pajama party with a lingerie shower: guests guess who gave each gift.</li>
-      </ul>
-
-      <!-- PHOTO ROW 7 -->
-      <div class="row g-3 photo-row">
-        <div class="col-4"><figure class="photo ratio-square" data-label="Decorated cups"><img width="200" height="200" loading="lazy" decoding="async" src="images/decorated-cup.png" alt="Decorated bachelorette party cups with letter stickers" onerror="this.remove()"></figure></div>
-        <div class="col-4"><figure class="photo ratio-square" data-label="Prosecco pong"><img width="200" height="200" loading="lazy" decoding="async" src="images/prosecco-pong.png" alt="Prosecco pong set up at a beach house" onerror="this.remove()"></figure></div>
-        <div class="col-4"><figure class="photo ratio-square" data-label="Pajama party"><img width="200" height="200" loading="lazy" decoding="async" src="images/pajama-party.png" alt="Bachelorette pajama party in matching sets" onerror="this.remove()"></figure></div>
-      </div>
-
-      <!-- MICHAEL AT YOUR PLACE (single mention) -->
-      <div class="feature">
-        <h2 class="mt-0">Night In: Bring the Show to the House</h2>
-        <div class="row g-4 align-items-center">
-          <div class="col-md-5">
-            <figure class="photo ratio-square mb-0" data-label="Michael At Your Place">
-              <img width="200" height="200" loading="lazy" decoding="async" src="images/michael.png" alt="Michael At Your Place private bachelorette entertainment in isle of palms" onerror="this.remove()">
-            </figure>
-          </div>
-          <div class="col-md-7">
-            <p class="mb-0">Since Isle of Palms nights are mostly spent at the house, plan one big night in. Pair the pajama party or lingerie shower with a private performance from <a href="https://michaelatyourplace.com/" target="_blank" rel="noopener">Michael At Your Place</a>, who comes to rentals across the Charleston area. No Ubers, no lines, and the bride stays the center of attention.</p>
+      <!-- 07 -->
+      <section class="sec" id="downtown">
+        <div class="num">07</div>
+        <h2>Charleston Night Out</h2>
+        <p>Reserve dinner 4–6 weeks ahead. Many downtown restaurants require a deposit or set menu for large parties.</p>
+        <ul class="places">
+          <li><span class="name"><a href="https://leonsoystershop.com/" target="_blank" rel="noopener">Leon's Oyster Shop</a></span><span class="desc">Fried chicken and oysters, with family-style options for groups.</span></li>
+          <li><span class="name"><a href="https://www.thedarlingoysterbar.com/" target="_blank" rel="noopener">The Darling Oyster Bar</a></span><span class="desc">King Street raw bar before barhopping.</span></li>
+          <li><span class="name"><a href="https://www.vintagecharleston.com/" target="_blank" rel="noopener">Vintage Lounge</a></span><span class="desc">Upper King wine bar with bubbles and charcuterie.</span></li>
+          <li><span class="name"><a href="https://www.thecocktailclubcharleston.com/" target="_blank" rel="noopener">The Cocktail Club</a></span><span class="desc">Craft cocktails and a rooftop.</span></li>
+          <li><span class="name"><a href="https://www.google.com/maps/search/Uptown+Social+Charleston+SC" target="_blank" rel="noopener">Uptown Social</a></span><span class="desc">Busy Upper King rooftop.</span></li>
+        </ul>
+        <div class="photos">
+          <figure class="photo" data-label="Oysters"><img width="200" height="200" loading="lazy" decoding="async" src="images/oysters.png" alt="Oyster platter at a King Street restaurant" onerror="this.remove()"></figure>
+          <figure class="photo" data-label="Champagne toast"><img width="200" height="200" loading="lazy" decoding="async" src="images/toasting-wine.png" alt="Champagne toast at a bachelorette dinner in Charleston" onerror="this.remove()"></figure>
+          <figure class="photo" data-label="Rooftop bar"><img width="200" height="200" loading="lazy" decoding="async" src="images/rooftop-bar.png" alt="Rooftop bar on Upper King Street, Charleston" onerror="this.remove()"></figure>
+        </div>
+         <!-- Night in feature (single mention) -->
+        <div class="feature">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-auto">
+              <figure class="photo" data-label="Night in">
+                <img width="200" height="200" loading="lazy" decoding="async" src="images/michael.png" alt="Michael At Your Place private bachelorette entertainment in Isle of Palms" onerror="this.remove()">
+              </figure>
+            </div>
+            <div class="col-md">
+              <div class="eyebrow">Night In</div>
+              <h2>Bring the Show After Dinner</h2>
+              <p class="mb-0">Most Isle of Palms nights happen at the rental, so make one of them the main event. Add a private performance from <a href="https://michaelatyourplace.com/" target="_blank" rel="noopener">Michael At Your Place</a> to the pajama party or lingerie shower. He travels to rentals across the Charleston area, so there are no rides or lines and the focus stays on the bride.</p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <h2 id="itinerary">What Was the Weekend Schedule Like?</h2>
-      <h3>Thursday</h3>
-      <p>Early arrivals stock the fridge and decorate. Everyone else trickles in; keep dinner easy with snacks and cocktails at the house.</p>
-      <h3>Friday</h3>
-      <p>Pool and beach day with a sandwich bar for lunch. Early dinner downtown at <a href="https://leonsoystershop.com/" target="_blank" rel="noopener">Leon's</a>, then barhop Upper King.</p>
-      <h3>Saturday</h3>
-      <p>Sleep in. Frosé at <a href="https://www.google.com/maps/search/The+Co-Op+Frose+and+Eatery+Sullivan%27s+Island" target="_blank" rel="noopener">The Co-Op</a>, late lunch at <a href="https://www.hometeambbq.com/" target="_blank" rel="noopener">Home Team BBQ</a> or an afternoon boat. Night in: pizza, games, pajama party.</p>
-      <h3>Sunday</h3>
-      <p>Coffee, cleanup and a 10am checkout.</p>
+      <!-- 08 -->
+      <section class="sec" id="activities">
+        <div class="num">08</div>
+        <h2>Isle of Palms Bachelorette Activities</h2>
+        <ul class="bullets">
+          <li><strong>Beach day:</strong> rent chairs and umbrellas or walk straight out from the rental.</li>
+          <li><strong>Party boat:</strong> <a href="https://www.google.com/maps/search/Captain+Cocktail+Cruises+Shem+Creek" target="_blank" rel="noopener">Captain Cocktail Cruises</a> runs BYOB pontoons from Shem Creek with swim stops and floats.</li>
+          <li><strong>Harbor cruise:</strong> the <a href="https://www.danielislandferry.com/" target="_blank" rel="noopener">Daniel Island Ferry</a> does private charters and sunset trips.</li>
+          <li><strong>Paddle:</strong> <a href="https://coastalexpeditions.com/shem-creek/" target="_blank" rel="noopener">Coastal Expeditions</a> rents kayaks and boards and runs dolphin tours.</li>
+          <li><strong>Golf carts and bikes:</strong> cruise Front Beach and Sullivan's.</li>
+          <li><strong>Golf or spa:</strong> both are at <a href="https://www.destinationhotels.com/wild-dunes" target="_blank" rel="noopener">Wild Dunes Resort</a>.</li>
+        </ul>
+        <div class="photos">
+          <figure class="photo" data-label="Party pontoon"><img width="200" height="200" loading="lazy" decoding="async" src="images/pantoon-boat.png" alt="Bachelorette party pontoon on Charleston Harbor" onerror="this.remove()"></figure>
+          <figure class="photo" data-label="Golf cart"><img width="200" height="200" loading="lazy" decoding="async" src="images/golf-cart.png" alt="Golf cart ride on Isle of Palms" onerror="this.remove()"></figure>
+        </div>
+      </section>
 
-      <!-- PHOTO ROW 8 -->
-      <div class="row g-3 photo-row">
-        <div class="col-6"><figure class="photo ratio-square" data-label="Morning coffee on the porch"><img width="200" height="200" loading="lazy" decoding="async" src="images/coffee-cup.png" alt="Morning coffee on a beach house porch on Isle of Palms" onerror="this.remove()"></figure></div>
-        <div class="col-6"><figure class="photo ratio-square" data-label="Sunset on the beach"><img width="200" height="200" loading="lazy" decoding="async" src="images/sunset-night.png" alt="Sunset on the Isle of Palms beach" onerror="this.remove()"></figure></div>
-      </div>
+      <!-- 09 -->
+      <section class="sec" id="ideas">
+        <div class="num">09</div>
+        <h2>Bachelorette Party Ideas for the Rental</h2>
+        <ul class="bullets">
+          <li>Name cups with letter stickers so drinks don't get mixed up.</li>
+          <li>Hangover kits: pain reliever, makeup wipes, electrolytes and snacks.</li>
+          <li>Prosecco pong with coupes.</li>
+          <li>Matching cover-ups, with white for the bride.</li>
+          <li>Balloon name banner and an instant camera for a photo wall.</li>
+          <li>Pajama party and lingerie shower where guests guess who gave each gift.</li>
+        </ul>
+        <div class="photos">
+          <figure class="photo" data-label="Decorated cups"><img width="200" height="200" loading="lazy" decoding="async" src="images/decorated-cup.png" alt="Decorated bachelorette party cups with letter stickers" onerror="this.remove()"></figure>
+          <figure class="photo" data-label="Prosecco pong"><img width="200" height="200" loading="lazy" decoding="async" src="images/prosecco-pong.png" alt="Prosecco pong set up at a beach house" onerror="this.remove()"></figure>
+          <figure class="photo" data-label="Pajama party"><img width="200" height="200" loading="lazy" decoding="async" src="images/pajama-party.png" alt="Bachelorette pajama party in matching sets" onerror="this.remove()"></figure>
+        </div>
 
-      <h2>Quick Planning Tips</h2>
-      <ul>
-        <li><strong>Best months:</strong> April–June and September–October. Winter is cheaper but the beach is windy.</li>
-        <li><strong>Book early:</strong> big homes go 6–12 months out for spring weekends.</li>
-        <li><strong>Check rules:</strong> Isle of Palms has beach rules on alcohol, glass and noise; keep the party at the house.</li>
-        <li><strong>Rides home:</strong> schedule late-night pickups from downtown before you leave the island.</li>
-      </ul>
+       
+      </section>
+
+      <!-- 10 -->
+      <section class="sec" id="itinerary">
+        <div class="num">10</div>
+        <h2>Sample Thursday–Sunday Itinerary</h2>
+        <ol class="timeline">
+          <li><span class="day">Thursday</span>Early crew stocks the fridge and decorates. Others arrive through the evening; snacks and cocktails at the house.</li>
+          <li><span class="day">Friday</span>Pool and beach with a sandwich-bar lunch. Early dinner at <a href="https://leonsoystershop.com/" target="_blank" rel="noopener">Leon's</a>, then Upper King.</li>
+          <li><span class="day">Saturday</span>Slow morning. Frosé at <a href="https://www.google.com/maps/search/The+Co-Op+Frose+and+Eatery+Sullivan%27s+Island" target="_blank" rel="noopener">The Co-Op</a>, lunch at <a href="https://www.hometeambbq.com/" target="_blank" rel="noopener">Home Team BBQ</a> or an afternoon boat. Pizza and pajama party at night.</li>
+          <li><span class="day">Sunday</span>Coffee, cleanup and checkout.</li>
+        </ol>
+        <div class="photos">
+          <figure class="photo" data-label="Morning coffee"><img width="200" height="200" loading="lazy" decoding="async" src="images/coffee-cup.png" alt="Morning coffee on a beach house porch on Isle of Palms" onerror="this.remove()"></figure>
+          <figure class="photo" data-label="Sunset"><img width="200" height="200" loading="lazy" decoding="async" src="images/sunset-night.png" alt="Sunset on the Isle of Palms beach" onerror="this.remove()"></figure>
+        </div>
+      </section>
+
+      <!-- 11 -->
+      <section class="sec">
+        <div class="num">11</div>
+        <h2>Planning Tips</h2>
+        <ul class="bullets">
+          <li><strong>Best months:</strong> April–June and September–October. Winter is cheaper but windy.</li>
+          <li><strong>Book early:</strong> large homes book 6–12 months out for spring.</li>
+          <li><strong>Know the rules:</strong> the island restricts alcohol, glass and noise on the beach. Keep the party at the house.</li>
+          <li><strong>Plan rides home:</strong> schedule downtown pickups before you leave the island.</li>
+        </ul>
+      </section>
+
     </article>
-
-    <!-- SIDEBAR -->
-    <aside class="col-lg-4">
-      <div class="sidebar">
-        
-        <div class="box">
-          <h4>In This Guide</h4>
-          <ul>
-            <li><a href="#stay">Where to Stay</a></li>
-            <li><a href="#eat">Where to Eat &amp; Drink</a></li>
-            <li><a href="#activities">Activities</a></li>
-            <li><a href="#itinerary">Weekend Itinerary</a></li>
-          </ul>
-        </div>
-        <div class="box">
-          <h4>Island Basics</h4>
-          <ul>
-            <li>Downtown Charleston: ~20–25 min</li>
-            <li>Sullivan's Island: ~10 min</li>
-            <li>CHS Airport: ~25–30 min</li>
-            <li>Best for: groups of 8–16</li>
-          </ul>
-        </div>
-      </div>
-    </aside>
-
   </div>
 </main>
 
-
 <!-- FOOTER -->
 <footer>
-  <svg class="monogram" viewBox="0 0 160 110" role="img" aria-label="IOP monogram">
-    <path d="M18 70 C10 40, 40 30, 45 52 M142 70 C150 40, 120 30, 115 52" fill="none" stroke="#f2c9cf" stroke-width="3" stroke-linecap="round"/>
-    <path d="M30 88 C50 102, 110 102, 130 88" fill="none" stroke="#f2c9cf" stroke-width="2.5" stroke-linecap="round"/>
-    <text x="80" y="78" text-anchor="middle" font-family="Cinzel, serif" font-size="46" fill="#ecb3bb" stroke="#d9939d" stroke-width=".6">IOP</text>
-    <circle cx="80" cy="20" r="3" fill="#e8a3ad"/>
-  </svg>
-  <p class="disclosure mb-0">This guide may contain affiliate and partner links.</p>
-  <p class="copy">&copy; Isle of Palms Bachelorette 2026 &nbsp;/&nbsp; <a href="about.html" style="color:inherit;font-weight:400">About</a> &nbsp;/&nbsp; <a href="contact.html" style="color:inherit;font-weight:400">Contact</a> &nbsp;/&nbsp; <a href="privacy.html" style="color:inherit;font-weight:400">Privacy</a></p>
-  <div class="footer-rule"></div>
+  <div class="foot-brand">Isle of Palms <em>Bachelorette</em></div>
+  <p class="disclosure">This guide may contain affiliate and partner links.</p>
+  <div class="foot-links">
+    <a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a>
+  </div>
+  <p class="copy">&copy; 2026 Isle of Palms Bachelorette</p>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
